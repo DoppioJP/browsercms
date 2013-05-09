@@ -1,11 +1,11 @@
 PATH
   remote: .
   specs:
-    browsercms (3.5.6)
+    browsercms (3.5.7)
       ancestry (~> 1.2.4)
       ckeditor_rails (~> 3.6.4)
       jquery-rails (~> 2.0)
-      paperclip (~> 3.0.3)
+      paperclip (~> 3.1.4)
       rails (>= 3.2.5, < 3.3.0)
       sass-rails
       term-ansicolor
@@ -112,7 +112,7 @@ GEM
     multi_json (1.5.1)
     mysql2 (0.3.11)
     nokogiri (1.5.5)
-    paperclip (3.0.4)
+    paperclip (3.1.4)
       activemodel (>= 3.0.0)
       activerecord (>= 3.0.0)
       activesupport (>= 3.0.0)
@@ -154,8 +154,8 @@ GEM
     rspec-mocks (2.11.3)
     ruby-prof (0.11.2)
     rubyzip (0.9.9)
-    sass (3.2.3)
-    sass-rails (3.2.5)
+    sass (3.2.8)
+    sass-rails (3.2.6)
       railties (~> 3.2.0)
       sass (>= 3.1.10)
       tilt (~> 1.3)
@@ -172,7 +172,7 @@ GEM
     sqlite3 (1.3.6)
     sqlite3-ruby (1.3.3)
       sqlite3 (>= 1.3.3)
-    term-ansicolor (1.0.7)
+    term-ansicolor (1.1.5)
     test-unit (2.1.1)
     thin (1.5.0)
       daemons (>= 1.0.9)
