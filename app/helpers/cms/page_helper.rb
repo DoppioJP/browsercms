@@ -88,8 +88,10 @@ HTML
     # * <tt>:from_top</tt> - How many below levels from the root the tree should start at.
     #   All sections at this level will be shown.  The default is 0, which means show all
     #   nodes that are direct children of the root.
-    # * <tt>:show_parent</tt> - Determines if the name of the page itself show be shown as a breadcrumb link. Defaults to false, meaning
+    # * <tt>:show_parent</tt> - Determines if the name of the page itself should be shown as a breadcrumb link. Defaults to false, meaning
     #   that the parent section of the current page will be the 'last' breadcrumb link. (Note: This probably better renamed as 'show_page').
+    #   It will only hide the current page from the breadcrumb if the path of the section is the same or name of the section is the same as
+    #   page title.
     #
     def render_breadcrumbs(options={})
       return "" unless current_page
@@ -102,7 +104,7 @@ HTML
         items << content_tag(:li, 
           link_to(sec.name, sec.actual_path), (i == 0 ? {:class => "first"} : {}))
       end
-      if !show_parent && current_page.section.path == current_page.path
+      if !show_parent && (current_page.section.path == current_page.path or current_page.section.name == current_page.title)
         items[items.size-1] = content_tag(:li, current_page.section.name)
       else
         items << content_tag(:li, current_page.page_title)
