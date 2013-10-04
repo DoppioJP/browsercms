@@ -88,7 +88,7 @@ module Cms
     # Determine if a given container has any blocks within it. Useful for determine if markup should be conditionally included
     # when a block is present, but not shown if no block was added. For example:
     #
-    # <% unless container_has_block? :sidebar %>
+    # <% if container_has_block? :sidebar %>
     #   <div id="sidebar">
     #   <%= container :sidebar %>
     #   </div>
